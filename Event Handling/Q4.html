@@ -1,0 +1,28 @@
+<!-- create a password input field with a checkbox labeled
+ 'show password'. when the checkbox is checked, change the input 
+ type from 'password' to 'text' and back when unchecked -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Password </title>
+</head>
+<body>
+    <label for="password">Password:</label>
+    <input type="password"  id="password">
+    <input type="checkbox"  id="showPassword"> Show Password
+
+    <script>
+        showPassword.addEventListener('click', () => {
+            const passwordField = document.getElementById('password');
+            if(passwordField.type === 'password') {
+                passwordField.type= 'text';
+            } else {
+                passwordField.type = 'password'
+            }
+        })
+    </script>
+</body>
+</html>

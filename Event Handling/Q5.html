@@ -1,0 +1,26 @@
+<!-- create a text input and a div below it. As the user types, the div should display the same text in real time -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Password</title>
+</head>
+<body>
+    <label for="password">Password</label>
+    <input type="password" name="" id="password">
+    <input type="checkbox" name="" id="showPassword"> Show Password
+    <script>
+        const showPassword = document.getElementById('showPassword');
+        const passwordField = document.getElementById('password');
+        showPassword.addEventListener('click',() => {
+            if(passwordField.type === 'password') {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        })
+    </script>
+</body>
+</html>

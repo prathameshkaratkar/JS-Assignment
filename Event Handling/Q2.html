@@ -1,0 +1,30 @@
+<!-- create a div with some text inside. When the user hovers
+ (mouse over) on the div, change its background color to light 
+ blue. When the mouse leaves , revert it back to white -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hovering Background</title>
+</head>
+<body>
+    <div>
+        Hover over this text to change the background color.
+    </div>
+
+    <script>
+        const div = document.querySelector('div');
+
+        div.style.backgroundColor = 'white';
+
+        div.addEventListener('mouseover',() => {
+            div.style.backgroundColor = 'lightblue';
+        })
+        div.addEventListener('mouseout',() => {
+            div.style.backgroundColor = 'white';
+        })
+    </script>
+</body>
+</html>

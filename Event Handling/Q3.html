@@ -1,0 +1,25 @@
+<!-- Create a button labeled 'click me'. every time the button is clicked, increase a counter and display 'You clicked X times' below the function -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Click</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <p>You clicked 0 times</p>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const para = document.querySelector('p');
+        let count = 0;
+       
+        btn.addEventListener('click', () => {
+            count++;
+            para.textContent = `You clicked ${count} times`;        
+        })
+    </script>
+</body>
+</html>
